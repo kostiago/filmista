@@ -1,5 +1,7 @@
 import { poppins } from "@/app/utils/fonts";
 import "./globals.css";
+import Navbar from "./pages/components/navbar/navbar";
+import Footer from "./pages/components/Footer/footer";
 
 export const metadata = {
   title: "Filmista",
@@ -9,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Navbar />
+        <div>{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }

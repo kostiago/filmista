@@ -1,7 +1,3 @@
-.logo {
-  width: 250px;
-  height: 100px;
-}
 .container {
   display: flex;
   justify-content: center;
@@ -10,7 +6,7 @@
 
 .leftLogin {
   width: 50vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,8 +54,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 16px 0px;
+  margin: 10px 0px;
 }
+
 .textfield input::-ms-reveal,
 .textfield input::-webkit-reveal {
   display: none; /* Oculta o ícone padrão de revelar senha no Firefox */
@@ -92,7 +89,7 @@
 .btnLogin {
   width: 100%;
   padding: 16px 0px;
-  margin: 25px;
+  margin: 20px;
   border: none;
   border-radius: 8px;
   outline: none;
@@ -102,4 +99,42 @@
   color: #ffffff;
   background: #7b6ef6;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.btnLogin:hover {
+  background: #cbf3d2;
+  color: var(--textSoft);
+}
+
+.cu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.checkbox,
+.needHelp {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+.checkbox span {
+  margin-left: 8px;
+}
+.information {
+  text-align: center; /* Centraliza o texto dentro do div */
+}
+
+.information span:first-child {
+  display: inline-block; /* Mantém o primeiro span como inline-block */
+  text-align: left; /* Alinha o texto do primeiro span à esquerda */
+  margin-top: 8px;
+}
+
+.information span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-align: justify;
 }
