@@ -1,9 +1,9 @@
 :root {
   --bg: #121829;
   --bgSoft: #011222;
-  --bgSoftAlternative: #fefefe;
-  --text: #fefefe;
+  --text: #a8aebf;
   --textSoft: #333333;
+  --bgSoftAlternative: #c3c8d4;
 }
 
 * {
@@ -15,6 +15,7 @@
 body {
   background-color: var(--bg);
   color: var(--text);
+  background-image: url(../public/Background.svg);
 }
 
 a {

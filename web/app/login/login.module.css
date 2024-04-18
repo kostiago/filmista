@@ -1,3 +1,105 @@
-container {
-    
+.logo {
+  width: 250px;
+  height: 100px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftLogin {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rightLogin {
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.cardLogin {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+
+  border-radius: 20px;
+}
+
+.cardLogin h1 {
+  font-weight: 600;
+  font-size: 64px;
+  color: var(--bgSoftAlternative);
+  align-items: flex-start;
+}
+
+.textfield {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 16px 0px;
+}
+.textfield input::-ms-reveal,
+.textfield input::-webkit-reveal {
+  display: none; /* Oculta o ícone padrão de revelar senha no Firefox */
+}
+
+.textfield input {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid #323b54;
+  font-size: 14px;
+  outline: none;
+  color: var(--text);
+}
+
+.showPassword {
+  position: absolute;
+  top: 70%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #475069;
+  outline: none;
+}
+
+.btnLogin {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #ffffff;
+  background: #7b6ef6;
+  cursor: pointer;
 }
