@@ -16,6 +16,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   background-image: url(../public/Background.svg);
+  background-size: cover;
 }
 
 a {

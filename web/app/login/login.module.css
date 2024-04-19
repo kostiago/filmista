@@ -118,12 +118,23 @@
   display: flex;
   font-size: 14px;
   align-items: center;
+  transition: all 0.3s ease-out;
 }
+
 .checkbox span {
   margin-left: 8px;
 }
+
+.needHelp:hover {
+  color: #cbf3d2;
+}
+
 .information {
   text-align: center; /* Centraliza o texto dentro do div */
+}
+
+.information strong:hover {
+  color: #cbf3d2;
 }
 
 .information span:first-child {

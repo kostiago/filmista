@@ -77,11 +77,17 @@ const LoginPage = () => {
           </div>
           <div className={styles.information}>
             <span>
-              Novo por aqui? <strong>Assine agora.</strong>
+              Novo por aqui?{" "}
+              <Link href={"/"}>
+                <strong>Assine agora.</strong>
+              </Link>
             </span>
             <span>
-              Esta página é protegida pelo Google <strong>reCAPTCHA</strong>{" "}
-              para garantir que você não é um robô. Saiba mais.
+              Esta página é protegida pelo Google{" "}
+              <Link href={"/"}>
+                <strong>reCAPTCHA</strong>
+              </Link>{" "}
+              para garantir que você não é um robô.{" "}
             </span>
           </div>
         </div>
