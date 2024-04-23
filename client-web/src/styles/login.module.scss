@@ -1,153 +1,151 @@
 .container {
+  margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  margin-top: 2rem;
 
-.leftLogin {
-  width: 50vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  .leftLogin {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.rightLogin {
-  width: 50vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .rightLogin {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.title {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.cardLogin {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 30px 35px;
+    .cardLogin {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 30px 35px;
+      border-radius: 20px;
 
-  border-radius: 20px;
-}
+      .title {
+        font-weight: 600;
+        font-size: 40px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
-.cardLogin h1 {
-  font-weight: 600;
-  font-size: 64px;
-  color: var(--bgSoftAlternative);
-  align-items: flex-start;
-}
+      .textfield {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 10px 0px;
+        font-size: 14px;
+      }
 
-.textfield {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 10px 0px;
-  font-size: 14px;
-}
+      .textfield input::-ms-reveal,
+      .textfield input::-webkit-reveal {
+        display: none; /* Oculta o ícone padrão de revelar senha no Firefox */
+      }
 
-.textfield input::-ms-reveal,
-.textfield input::-webkit-reveal {
-  display: none; /* Oculta o ícone padrão de revelar senha no Firefox */
-}
+      .textfield input {
+        width: 100%;
+        border: none;
+        border-radius: 12px;
+        padding: 15px;
+        background: transparent;
+        border: 1px solid #323b54;
+        font-size: 14px;
+        outline: none;
+        color: var(--text);
+        margin-top: 0.5rem;
+      }
 
-.textfield input {
-  width: 100%;
-  border: none;
-  border-radius: 12px;
-  padding: 15px;
-  background: transparent;
-  border: 1px solid #323b54;
-  font-size: 14px;
-  outline: none;
-  color: var(--text);
-  margin-top: 0.5rem;
-}
+      .showPassword {
+        position: absolute;
+        top: 70%;
+        right: 20px;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: #475069;
+        outline: none;
+      }
 
-.showPassword {
-  position: absolute;
-  top: 70%;
-  right: 20px;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #475069;
-  outline: none;
-}
+      .btnLogin {
+        width: 100%;
+        padding: 16px 0px;
+        margin: 20px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 3px;
+        color: #ffffff;
+        background: #7b6ef6;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+      }
 
-.btnLogin {
-  width: 100%;
-  padding: 16px 0px;
-  margin: 20px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: #ffffff;
-  background: #7b6ef6;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
+      .btnLogin:hover {
+        background: #cbf3d2;
+        color: #000;
+      }
 
-.btnLogin:hover {
-  background: #cbf3d2;
-  color: var(--textSoft);
-}
+      .cu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
 
-.cu {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+      .checkbox,
+      .needHelp {
+        display: flex;
+        font-size: 14px;
+        align-items: center;
+        transition: all 0.3s ease-out;
+      }
 
-.checkbox,
-.needHelp {
-  display: flex;
-  font-size: 14px;
-  align-items: center;
-  transition: all 0.3s ease-out;
-}
+      .checkbox span {
+        margin-left: 8px;
+      }
 
-.checkbox span {
-  margin-left: 8px;
-}
+      .needHelp:hover {
+        color: #cbf3d2;
+      }
 
-.needHelp:hover {
-  color: #cbf3d2;
-}
+      .information {
+        text-align: center; /* Centraliza o texto dentro do div */
+      }
 
-.information {
-  text-align: center; /* Centraliza o texto dentro do div */
-}
+      .information strong:hover {
+        color: #cbf3d2;
+      }
 
-.information strong:hover {
-  color: #cbf3d2;
-}
+      .information span:first-child {
+        display: inline-block; /* Mantém o primeiro span como inline-block */
+        text-align: left; /* Alinha o texto do primeiro span à esquerda */
+        margin-top: 8px;
+      }
 
-.information span:first-child {
-  display: inline-block; /* Mantém o primeiro span como inline-block */
-  text-align: left; /* Alinha o texto do primeiro span à esquerda */
-  margin-top: 8px;
-}
-
-.information span {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-  text-align: justify;
+      .information span {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        text-align: justify;
+      }
+    }
+  }
 }

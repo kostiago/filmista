@@ -1,0 +1,29 @@
+.heroSection {
+  width: 80%;
+  margin: 3rem auto;
+
+  .heroBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    .boxLeft {
+      padding-right: 6rem;
+
+      h1 {
+        font-size: 2rem;
+
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

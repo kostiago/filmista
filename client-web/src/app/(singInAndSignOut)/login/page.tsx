@@ -14,7 +14,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.leftLogin}>
         <img src="/images/man.svg" alt="logo" />
       </div>
@@ -90,7 +90,7 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
