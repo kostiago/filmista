@@ -3,6 +3,8 @@ import SignInAndSignOut from "../Buttons/signInAndSignOut";
 import styles from "./styles.module.scss";
 import { IoPlayCircle } from "react-icons/io5";
 import { AiOutlineSearch } from "react-icons/ai";
+import Button from "../Button/Button";
+import { ImGift } from "react-icons/im";
 
 const HeroSection = () => {
   return (
@@ -25,7 +27,13 @@ const HeroSection = () => {
           <div className={styles.form}>
             <form className={styles.searchForm}>
               <input type="text" placeholder="Digite seu email" />
-              <SignInAndSignOut />
+              <Button
+                rounded={true}
+                variant="secondary"
+                icon={<img src="./images/placeholder.svg" />}
+              >
+                Comece agora
+              </Button>
             </form>
           </div>
         </div>

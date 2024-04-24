@@ -1,6 +1,9 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import SignInAndSignOut from "../Buttons/signInAndSignOut";
+import Button from "../Button/Button";
+
+import { AiOutlineLogin } from "react-icons/ai";
 
 const Header = ({ type = "public" }) => {
   let content;
@@ -16,7 +19,13 @@ const Header = ({ type = "public" }) => {
             />
           </Link>
 
-          <SignInAndSignOut />
+          <Button
+            rounded
+            variant="secondary"
+            icon={<img src="./images/placeholder.svg" />}
+          >
+            Comece agora
+          </Button>
         </div>
       );
       break;
@@ -37,11 +46,20 @@ const Header = ({ type = "public" }) => {
             <Link href="/suggestions">Sugestões</Link>
           </nav>
           <div className={styles.loginButtons}>
-            <button className={styles.loginButton}>
-              <img src="/images/lock.svg" alt="" />
-              Entrar
-            </button>
-            <SignInAndSignOut />
+            <Link href={"/login"}>
+              <Button rounded variant="login" icon={<AiOutlineLogin />}>
+                Entrar
+              </Button>
+            </Link>
+            <Link href={"/register"}>
+              <Button
+                rounded
+                variant="secondary"
+                icon={<img src="/images/placeholder.svg" />}
+              >
+                Comece agora
+              </Button>
+            </Link>
           </div>
         </div>
       );
