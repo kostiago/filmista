@@ -1,32 +1,48 @@
 .headerContainer {
-  height: 6rem;
-}
+  width: 100%;
+  height: 80px;
 
-.headerContent {
-  max-width: 1120px;
-  height: 6rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
+  .headerContent {
+    max-width: 1120px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-  nav {
-    margin-left: 5rem;
-    height: 5rem;
+    img {
+      height: 50px;
+    }
 
-    a {
-      display: inline-block;
-      position: relative;
-      padding: 0 0.5rem;
-      height: 5rem;
-      line-height: 5rem;
+    nav {
+      display: flex;
+      gap: 5rem;
+      font-size: 14px;
+    }
 
-      & + a {
-        margin-left: 2rem;
+    .loginButtons {
+      display: flex;
+      align-items: center;
+
+      .loginButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border: none;
+        color: #20b486;
+        font-weight: bold;
+      }
+
+      img {
+        margin-right: 0.5rem;
+        width: 20px;
       }
     }
-  }
-
-  button {
-    margin-left: auto;
   }
 }

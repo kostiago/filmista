@@ -13,7 +13,6 @@ const Header = ({ type = "public" }) => {
             <img
               src="/images/logo.svg"
               alt="Filmista - O Stream com a sua cara"
-              width={150}
             />
           </Link>
 
@@ -37,7 +36,13 @@ const Header = ({ type = "public" }) => {
             <Link href="/tv-programs">Series</Link>
             <Link href="/suggestions">Sugestões</Link>
           </nav>
-          <SignInAndSignOut />
+          <div className={styles.loginButtons}>
+            <button className={styles.loginButton}>
+              <img src="/images/lock.svg" alt="" />
+              Entrar
+            </button>
+            <SignInAndSignOut />
+          </div>
         </div>
       );
       break;
