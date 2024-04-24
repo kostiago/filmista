@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 1120px;
+
+  .left {
+    width: 40vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h1 {
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 34px;
+    }
+  }
+
+  .right {
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
