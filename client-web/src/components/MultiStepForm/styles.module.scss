@@ -41,6 +41,12 @@
   height: 100vh;
 }
 
+.btnChoiceScreen {
+  display: flex;
+  justify-content: flex-end;
+  background: red;
+  gap: 1rem;
+}
 .planChoiceContent {
   text-align: center;
 }
@@ -63,3 +69,109 @@
 .planChoiceDescriptionItem svg {
   margin-right: 10px;
 }
+
+/*CREDIT CARD FORM*/
+
+.creditContainer {
+  .creditForm {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    input {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-width: 1px;
+      width: 100%;
+      background: transparent;
+      border: 1px solid #323b54;
+      font-size: 14px;
+      outline: none;
+      color: var(--text);
+    }
+
+    .dateCVV {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+
+      div:first-child {
+        flex: 1 1 0%;
+      }
+    }
+  }
+}
+
+/*.frontCard {
+      background-image: url("../../../public/images/card/bg-card-front.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      display: flex;
+      padding: 1.25rem;
+      flex-direction: column;
+      justify-content: space-between;
+
+      height: 160px;
+      width: 280px;
+      border-radius: 10px;
+
+      img {
+        width: 3rem;
+      }
+
+      .creditInfo {
+        h2 {
+          margin-bottom: 1.5rem;
+          font-size: 1.1rem;
+          line-height: 2rem;
+          letter-spacing: 0.1em;
+        }
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          li {
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .backCard {
+      background-image: url("../../../public/images/card/bg-card-back.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 160px;
+      width: 280px;
+      border-radius: 10px;
+
+      p {
+        position: relative;
+        left: 14rem;
+        top: 4.1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.75rem;
+        letter-spacing: 0.1em;
+      }
+    }*/
