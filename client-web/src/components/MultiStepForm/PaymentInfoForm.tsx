@@ -14,6 +14,11 @@ type TFormValues = {
 };
 
 const PaymentInfoForm = () => {
+  const [name, setName] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expirationDate, setExpirationDate] = useState("");
+  const [cvv, setCVV] = useState("");
+
   const { register, handleSubmit } = useForm<TFormValues>();
   const [formData, setFormData] = useState<TFormValues>({
     holder: "",
@@ -32,17 +37,17 @@ const PaymentInfoForm = () => {
         <article className={styles.frontCard}>
           <img src={"/images/card/card-logo.svg"} alt="logo" />
           <div className={styles.creditInfo}>
-            <h2>0000 0000 0000 0000</h2>
+            <h2>{cardNumber}</h2>
 
             <ul>
-              <li>Thomas Sankara</li>
-              <li>00/00</li>
+              <li>{name}</li>
+              <li>{expirationDate}</li>
             </ul>
           </div>
         </article>
 
         <article className={styles.backCard}>
-          <p>132</p>
+          <p>{cvv}</p>
         </article>
       </div>
 
@@ -58,6 +63,8 @@ const PaymentInfoForm = () => {
               id="holder"
               placeholder="e.g. Jane AppleSeed"
               {...register("holder")}
+              required
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
 
@@ -68,7 +75,13 @@ const PaymentInfoForm = () => {
               id="cardNumber"
               maxLength={19}
               placeholder="e.g 1234 8564 3698 4562"
+              required
+              value={cardNumber
+                .replace(/\s/g, "")
+                .replace(/(\d{4})/g, "$1 ")
+                .trim()}
               {...register("cardNumber")}
+              onChange={(e) => setCardNumber(e.target.value)}
             />
           </div>
 
@@ -80,6 +93,8 @@ const PaymentInfoForm = () => {
                 id="expirationDate"
                 placeholder="MM YY"
                 {...register("expirationDate")}
+                required
+                onChange={(e) => setExpirationDate(e.target.value)}
               />
             </div>
 
@@ -91,6 +106,8 @@ const PaymentInfoForm = () => {
                 placeholder="e.g 123"
                 maxLength={3}
                 {...register("cvv")}
+                required
+                onChange={(e) => setCVV(e.target.value)}
               />
             </div>
           </article>
