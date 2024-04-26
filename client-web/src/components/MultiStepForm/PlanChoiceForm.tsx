@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
 import { useState } from "react";
 import { useFormState } from "./FormContext";
+import styles from "./styles.module.scss";
 
 type TFormValues = {
   plan: string;
@@ -46,7 +47,7 @@ const PlanChoiceForm = () => {
           />
           <label htmlFor="planC">Plano C</label>
         </div>
-        <div>
+        <div className={styles.btnChoice}>
           <div onClick={onHandleBack}>
             <Button rounded variant="login">
               Voltar

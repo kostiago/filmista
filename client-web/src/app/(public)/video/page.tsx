@@ -1,13 +1,12 @@
-import styles from "../../../styles/home.module.scss";
+import { MdArrowBack } from "react-icons/md";
+import styles from "./video.module.scss";
 
 const Video = () => {
   return (
-    <div className={styles.efeito}>
-      <img src="/images/gift.webp" />
-      <div className={styles.text}>
-        <h1>Filmista</h1>
-      </div>
-    </div>
+    <button className={styles.downloadBtn}>
+      <img src="/images/placeholder.svg" alt="" />
+      <span className="text">Download Files</span>
+    </button>
   );
 };
 

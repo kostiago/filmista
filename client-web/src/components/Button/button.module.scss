@@ -3,12 +3,12 @@
   color: var(--text);
   border: none;
   outline: none;
-  font-size: 14px;
+
   cursor: pointer;
   border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
+
   letter-spacing: 0.025em;
   transition: 0.2s ease-in-out;
   padding: 0 0.5rem;
@@ -19,10 +19,6 @@
   svg {
     width: 20px;
     height: 20px;
-  }
-
-  img:first-child,
-  svg:first-child {
     margin-right: 0.3rem;
   }
 }

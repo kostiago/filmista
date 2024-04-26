@@ -18,6 +18,7 @@ interface ButtonProps {
     | "login"
     | "addUser";
   icon?: React.ReactNode;
+  color?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -26,6 +27,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   variant,
   icon,
+  color,
   ...props
 }) => (
   <button
@@ -41,8 +43,10 @@ const Button: React.FC<ButtonProps> = ({
         ${variant === "addUser" ? styles.addUser : ""}
         ${variant === "dark" ? styles.dark : ""}
         ${variant === "login" ? styles.login : ""}
-        ${rounded ? styles.rounded : ""}`}
+        ${rounded ? styles.rounded : ""}
+        ${color ? styles.customColor : ""}`}
     {...props}
+    style={{ color: color }}
   >
     {icon && <span className={styles.icon}>{icon}</span>}
     {children}
@@ -66,6 +70,7 @@ Button.propTypes = {
     "login",
   ]),
   icon: PropTypes.node,
+  color: PropTypes.string,
 };
 
 export default Button;

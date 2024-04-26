@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
-import SignInAndSignOut from "../Buttons/signInAndSignOut";
+
 import Button from "../Button/Button";
 
 import { AiOutlineLogin } from "react-icons/ai";

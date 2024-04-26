@@ -29,7 +29,6 @@
   .btn {
     display: flex;
     justify-content: flex-end;
-    background: red;
   }
 }
 
@@ -41,10 +40,10 @@
   height: 100vh;
 }
 
-.btnChoiceScreen {
+.btnChoice {
   display: flex;
-  justify-content: flex-end;
-  background: red;
+  justify-content: space-between;
+
   gap: 1rem;
 }
 .planChoiceContent {
@@ -81,51 +80,82 @@
     margin-bottom: -150px;
     position: relative;
 
-    .frontCard {
-      background-image: url("../../../public/images/card/bg-card-front.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+    .card {
+      transform-style: preserve-3d;
+      transition: all 0.8 ease;
 
-      display: flex;
-      padding: 1.25rem;
-      flex-direction: column;
-      justify-content: space-between;
+      .frontCard {
+        background-image: url("../../../public/images/card/bg-card-front.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        backface-visibility: hidden;
+        display: flex;
+        padding: 1.25rem;
+        flex-direction: column;
+        justify-content: space-between;
 
-      height: 200px;
-      width: 320px;
-      border-radius: 10px;
+        height: 200px;
+        width: 320px;
+        border-radius: 10px;
 
-      backface-visibility: hidden;
-      transform: perspective(1000px) rotateY(0deg);
-      transition: transform 0.4s ease-out;
+        transition: transform 0.4s ease-out;
 
-      img {
-        width: 3rem;
-      }
-
-      .creditInfo {
-        h2 {
-          margin-bottom: 1.5rem;
-          font-size: 1.1rem;
-          line-height: 2rem;
-          letter-spacing: 0.1em;
+        img {
+          width: 3rem;
         }
-        ul {
-          list-style: none;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
 
-          li {
-            font-size: 0.8rem;
-            font-weight: 600;
-            line-height: 1.75rem;
+        .creditInfo {
+          h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 2rem;
             letter-spacing: 0.1em;
-            text-transform: uppercase;
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+              font-size: 0.8rem;
+              font-weight: 600;
+              line-height: 1.75rem;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+            }
           }
         }
       }
+      .backCard {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("../../../public/images/card/bg-card-back.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 200px;
+        width: 320px;
+        border-radius: 10px;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+
+        p {
+          position: relative;
+          left: 16.7rem;
+          top: 5.2rem;
+          font-size: 0.8rem;
+          font-weight: 600;
+          line-height: 1.75rem;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    .cardFlip {
+      transform: rotateY(180deg);
     }
   }
 
@@ -143,7 +173,7 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
 
-    padding-top: 130px;
+    padding-top: 150px;
 
     label {
       display: block;
@@ -162,11 +192,11 @@
       padding-right: 1rem;
       border-width: 1px;
       width: 100%;
-      background: transparent;
+
       border: 1px solid #323b54;
       font-size: 14px;
       outline: none;
-      color: var(--text);
+      color: var(--textSoftOut);
     }
 
     .dateCVV {
@@ -178,34 +208,6 @@
       .te {
         flex: 1 1 0%;
       }
-    }
-  }
-
-  .backCard {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../../../public/images/card/bg-card-back.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 200px;
-    width: 320px;
-    border-radius: 10px;
-    transform: perspective(1000px) rotateY(180deg);
-    transition: transform 0.4s ease-out;
-    backface-visibility: hidden;
-
-    p {
-      position: relative;
-      left: 14rem;
-      top: 4.1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      line-height: 1.75rem;
-      letter-spacing: 0.1em;
-      color: red;
     }
   }
 }

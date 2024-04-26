@@ -2,6 +2,7 @@
   --bg: #121829;
   --text: #ebeef5;
   --textSoft: #a8aebf;
+  --textSoftOut: #444444;
 }
 
 * {
@@ -23,11 +24,13 @@ textarea,
 select,
 button {
   font-family: inherit;
+  text-decoration: none;
 }
 
 button {
   cursor: pointer;
 }
+
 a {
   color: inherit;
   text-decoration: none;

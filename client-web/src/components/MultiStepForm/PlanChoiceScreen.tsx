@@ -1,6 +1,7 @@
 "use client";
-import { useForm } from "react-hook-form";
+
 import Button from "../Button/Button";
+import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
 import { FaCheck, FaCheckCircle } from "react-icons/fa";
 import styles from "./styles.module.scss";
@@ -28,7 +29,7 @@ const PlanChoiceScreen = () => {
           </div>
         </div>
 
-        <div className={styles.btnChoiceScreen}>
+        <div className={styles.btnChoice}>
           <div onClick={onHandleBack}>
             <Button rounded variant="secondary">
               Voltar
@@ -36,7 +37,11 @@ const PlanChoiceScreen = () => {
           </div>
 
           <div onClick={onHandleNext}>
-            <Button rounded variant="secondary">
+            <Button
+              rounded
+              variant="secondary"
+              icon={<MdOutlineKeyboardDoubleArrowLeft />}
+            >
               Escolher Plano
             </Button>
           </div>

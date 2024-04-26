@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { useFormState } from "./FormContext";
+import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
 type TFormValues = {
   holder: string;
@@ -14,6 +16,8 @@ type TFormValues = {
 };
 
 const PaymentInfoForm = () => {
+  const { onHandleNext, onHandleBack } = useFormState();
+
   const [name, setName] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [expirationDate, setExpirationDate] = useState("");
@@ -28,27 +32,39 @@ const PaymentInfoForm = () => {
   });
 
   function onHandleFormSubmit(data: TFormValues) {
-    console.log({ data }); // Submete os dados para a próxima etapa ou ação final
+    onHandleNext(); // Submete os dados para a próxima etapa ou ação final
   }
+
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlipEnter = () => {
+    setIsFlipped(true);
+  };
+
+  const handleFlipLeave = () => {
+    setIsFlipped(false);
+  };
 
   return (
     <div className={styles.creditContainer}>
       <div className={styles.creditContext}>
-        <article className={styles.frontCard}>
-          <img src={"/images/card/card-logo.svg"} alt="logo" />
-          <div className={styles.creditInfo}>
-            <h2>{cardNumber}</h2>
+        <div className={`${styles.card} ${isFlipped ? styles.cardFlip : ""}`}>
+          <article className={styles.frontCard}>
+            <img src={"/images/card/card-logo.svg"} alt="logo" />
+            <div className={styles.creditInfo}>
+              <h2>{cardNumber}</h2>
 
-            <ul>
-              <li>{name}</li>
-              <li>{expirationDate}</li>
-            </ul>
-          </div>
-        </article>
+              <ul>
+                <li>{name}</li>
+                <li>{expirationDate}</li>
+              </ul>
+            </div>
+          </article>
 
-        <article className={styles.backCard}>
-          <p>{cvv}</p>
-        </article>
+          <article className={styles.backCard}>
+            <p>{cvv}</p>
+          </article>
+        </div>
       </div>
 
       <div>
@@ -98,7 +114,7 @@ const PaymentInfoForm = () => {
               />
             </div>
 
-            <div>
+            <div onMouseEnter={handleFlipEnter} onMouseLeave={handleFlipLeave}>
               <label htmlFor="cvv">CVV</label>
               <input
                 type="text"
@@ -112,9 +128,24 @@ const PaymentInfoForm = () => {
             </div>
           </article>
 
-          <Button rounded variant="info">
-            Finalizar
-          </Button>
+          <div className={styles.btnChoice}>
+            <div onClick={onHandleBack}>
+              <Button
+                rounded
+                variant="login"
+                color="#444444"
+                icon={<MdOutlineKeyboardDoubleArrowLeft color="#444444" />}
+              >
+                Voltar
+              </Button>
+            </div>
+
+            <div>
+              <Button rounded variant="secondary">
+                Escolher Plano
+              </Button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
