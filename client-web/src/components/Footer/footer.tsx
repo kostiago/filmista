@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./footer.module.scss";
 
 import { FaGitSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { Fa1 } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
           </p>
           <div className={styles.icons}>
             <Link href={"#"}>
-              <FaInstagramSquare />
+              <FaInstagramSquare width={50} />
             </Link>
             <Link href={"#"}>
               <FaLinkedin width={22} height={22} />
@@ -64,7 +65,7 @@ const Footer = () => {
 
         <div className={styles.footerColumn}>
           <h3>Contato</h3>
-          <p> ITPL Road</p>
+          <p> ITPL LOGO</p>
           <p>Brazil</p>
           <p>Endereço, CEP 560066, Brazil</p>
           <p className={styles.email}>
@@ -75,7 +76,9 @@ const Footer = () => {
           </h4>
         </div>
       </div>
-      <span>Copyright ©2024 LOGO All rights reserved</span>
+      <div className={styles.copy}>
+        <span>Copyright ©2024 ITPL LOGO All rights reserved</span>
+      </div>
     </footer>
   );
 };
