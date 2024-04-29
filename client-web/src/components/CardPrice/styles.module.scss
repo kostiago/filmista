@@ -1,0 +1,103 @@
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .table {
+    margin: 4rem 1.5rem;
+    text-align: center;
+    position: relative;
+
+    .price {
+      background: linear-gradient(45deg, #20b486, #20b4a1);
+      width: 5em;
+      height: 5em;
+      position: absolute;
+      top: -3rem;
+      left: 35%;
+      transform: translate(-50);
+      padding: 1.5em 1em 1em 1em;
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 0 1em 1em rgba(0, 0, 0, 0.3);
+    }
+
+    .shadowContainer {
+      filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.2));
+
+      .tableHeader {
+        width: 18rem;
+        height: 8rem;
+        background: linear-gradient(331deg, #321d58, #7344c8);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        clip-path: polygon(0 0, 100% 0%, 100% 80%, 50% 100%, 0 80%);
+
+        .title {
+          h1 {
+            margin: 0.3rem;
+            font-size: 1rem;
+            letter-spacing: 4px;
+          }
+
+          p {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .tableBody {
+      width: 17rem;
+      margin: -4rem auto 0 auto;
+      padding: 4rem 1rem 1rem 1rem;
+      background: #808080;
+      border-radius: 10px;
+      box-shadow: 0 0 4rem rgb(0, 0, 0, 0.1);
+
+      .bodyTitle {
+        margin: 1rem 0 0.2rem 0;
+        padding-bottom: 0.5rem;
+      }
+
+      .benefits {
+        margin: 0.1rem 0;
+        margin-bottom: 2rem;
+
+        .icon {
+          padding: 0.3rem 0;
+          font-size: 0.8rem;
+
+          span {
+            display: flex;
+            align-items: flex-start;
+            font-weight: bold;
+            padding-bottom: 0.1rem;
+            color: var(--textSoftOut);
+          }
+          img {
+            height: 6px;
+            display: flex;
+            align-items: center;
+          }
+          svg {
+            margin-right: 0.3rem;
+            color: #20b497;
+          }
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      bottom: -1rem;
+      left: 33%;
+      transform: rotateX(-50%);
+    }
+  }
+}
