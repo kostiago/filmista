@@ -1,13 +1,49 @@
 .header {
-  background: burlywood;
+  background: #89043d;
   display: flex;
   padding-left: 2rem;
   padding-right: 2rem;
   justify-content: space-between;
   align-items: center;
-  height: 3rem;
+  height: 4.5rem;
 
   .left {
     display: flex;
+    gap: 0.75rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      color: white;
+      align-items: center !important;
+    }
+  }
+
+  .right {
+    display: flex;
+
+    .tooltip {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      background: #fff;
+      border-radius: 0.3rem;
+      border: none;
+
+      &::before {
+        content: "Comece agora";
+        font-size: 0.8rem;
+        position: absolute;
+        width: 150%;
+        background-color: bisque;
+      }
+
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
   }
 }
