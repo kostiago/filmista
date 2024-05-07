@@ -44,6 +44,7 @@ const Header = ({ type = "public" }) => {
             <Link href="/movies">Filmes</Link>
             <Link href="/tv-programs">Series</Link>
             <Link href="/suggestions">Sugestões</Link>
+            <Link href={"/dashboard/addMovie"}>Dashboard</Link>
           </nav>
           <div className={styles.loginButtons}>
             <Link href={"/login"}>

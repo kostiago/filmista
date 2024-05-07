@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "../../../styles/login.module.scss";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
-import Image from "next/image";
+
 import Link from "next/link";
 
 const LoginPage = () => {

@@ -1,0 +1,13 @@
+.header {
+  background: burlywood;
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+
+  .left {
+    display: flex;
+  }
+}

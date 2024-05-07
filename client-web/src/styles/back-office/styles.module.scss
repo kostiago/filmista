@@ -1,0 +1,13 @@
+.backOffice {
+  display: flex;
+
+  .leftBar {
+    width: 14rem;
+    background: red;
+  }
+
+  .rightBar {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
