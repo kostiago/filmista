@@ -15,6 +15,7 @@ import {
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
+import IconButton from "@/components/IconButton/IconButton";
 
 const Header = () => {
   const [hovered, setHovered] = useState(false);
@@ -36,23 +37,23 @@ const Header = () => {
 
       <article className={styles.right}>
         <div className={styles.border}>
-          <button className={styles.tooltip}>
+          <IconButton rounded variant="icon">
             <MdAdd />
-          </button>
+          </IconButton>
         </div>
 
         <div className={styles.border}>
-          <button className={styles.tooltip}>
+          <IconButton rounded variant="addUser">
             <MdSupervisedUserCircle />
-          </button>
+          </IconButton>
 
-          <button className={styles.tooltip}>
+          <IconButton rounded variant="danger">
             <MdNotificationsActive />
-          </button>
+          </IconButton>
 
-          <button className={styles.tooltip}>
+          <IconButton rounded variant="info">
             <MdOutlineSettings />
-          </button>
+          </IconButton>
         </div>
 
         <div className={styles.perfil}>

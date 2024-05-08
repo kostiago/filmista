@@ -1,0 +1,206 @@
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: transparent;
+  border-radius: 0.3rem;
+  border: none;
+  margin-left: 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.icon {
+  background-color: #20b486;
+  &::before {
+    content: "Comece agora";
+    font-size: 0.8rem;
+    position: absolute;
+    width: 100px;
+    background-color: bisque;
+    padding: 0.5rem 1rem;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -3rem;
+    z-index: 1;
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1.25rem solid bisque;
+    border-left: 1.25rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -1.7rem;
+    display: none;
+  }
+
+  &:hover::before {
+    display: block;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  &:hover {
+    background-color: bisque;
+    color: #333333;
+  }
+}
+
+.addUser {
+  width: auto !important;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "Trocar usuario";
+    font-size: 0.8rem;
+    position: absolute;
+    width: 100px;
+    background-color: bisque;
+    padding: 0.5rem 1rem;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -3rem;
+    z-index: 1;
+    display: none;
+    color: #333333;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1.25rem solid bisque;
+    border-left: 1.25rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -1.7rem;
+    display: none;
+  }
+
+  &:hover::before {
+    display: block;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      color: bisque;
+    }
+  }
+}
+
+.rounded {
+  border-radius: 0.25rem; /* Equivalente a rounded */
+}
+
+.danger {
+  &::before {
+    content: "Notificações";
+    font-size: 0.8rem;
+    position: absolute;
+    width: 100px;
+    background-color: bisque;
+    padding: 0.5rem 1rem;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -3rem;
+    z-index: 1;
+    display: none;
+    color: #333333;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1.25rem solid bisque;
+    border-left: 1.25rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -1.7rem;
+    display: none;
+  }
+
+  &:hover::before {
+    display: block;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      color: #f56565;
+    }
+  }
+}
+
+.info {
+  &::before {
+    content: "Configurações";
+    font-size: 0.8rem;
+    position: absolute;
+    width: 100px;
+    background-color: bisque;
+    padding: 0.5rem 1rem;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -3rem;
+    z-index: 1;
+    display: none;
+    color: #333333;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1.25rem solid bisque;
+    border-left: 1.25rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -1.7rem;
+    display: none;
+  }
+
+  &:hover::before {
+    display: block;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      color: #6d7f8f;
+    }
+  }
+}
