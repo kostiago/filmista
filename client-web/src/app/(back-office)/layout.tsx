@@ -2,6 +2,7 @@ import { poppins } from "@/utils/font";
 import "../../styles/globals.scss";
 import styles from "../../styles/back-office/styles.module.scss";
 import Header from "@/components/back-office/Dashboard/Header/Header";
+import Sidebar from "@/components/back-office/Dashboard/Sidebar/Sidebar";
 
 export const metadata = {
   title: "Dashboard Administrativa",
@@ -16,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${poppins.className} ${styles.backOffice}`}>
-        <div className={styles.leftBar}>Sidebar</div>
+        <Sidebar />
         <main className={styles.rightBar}>
           <Header />
           {children}

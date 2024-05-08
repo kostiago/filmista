@@ -1,13 +1,6 @@
 .backOffice {
   display: flex;
 
-  .leftBar {
-    width: 14rem;
-    background: #0e121b;
-    background-image: url(../../../public/images/Background.svg);
-    background-size: cover;
-  }
-
   .rightBar {
     width: 100%;
     min-height: 100vh;
