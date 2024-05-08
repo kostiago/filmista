@@ -1,5 +1,5 @@
 .header {
-  background: #89043d;
+  background: #101625;
   display: flex;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -21,28 +21,97 @@
 
   .right {
     display: flex;
+    gap: 0.75rem;
+    align-items: center;
 
-    .tooltip {
-      position: relative;
+    .border {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
-      background: #fff;
-      border-radius: 0.3rem;
-      border: none;
+      padding-right: 0.5rem;
 
-      &::before {
-        content: "Comece agora";
-        font-size: 0.8rem;
-        position: absolute;
-        width: 150%;
-        background-color: bisque;
+      border-right: 2px solid red;
+
+      .tooltip {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        background: #fff;
+        border-radius: 0.3rem;
+        border: none;
+        margin-left: 0.5rem;
+        &::before {
+          content: "Comece agora";
+          font-size: 0.8rem;
+          position: absolute;
+          width: 100px;
+          background-color: bisque;
+          padding: 0.5rem 1rem;
+          transform: translateX(-50%);
+          left: 50%;
+          bottom: -3rem;
+          z-index: 1;
+          display: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          border-bottom: 1.25rem solid bisque;
+          border-left: 1.25rem solid transparent;
+          border-right: 1.25rem solid transparent;
+          transform: translateX(-50%);
+          left: 50%;
+          bottom: -1.7rem;
+          display: none;
+        }
+
+        &:hover::before {
+          display: block;
+        }
+
+        &:hover::after {
+          display: block;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .perfil {
+      display: flex;
+      gap: 0.75rem;
+
+      .btn {
+        display: flex;
+        font-size: 1rem;
+        align-items: center !important;
+        font-weight: 600;
+        color: var(--text);
+        p {
+          margin-right: 6px;
+        }
+        svg {
+          width: 0.7rem;
+          height: 0.7rem;
+        }
       }
 
-      svg {
-        width: 26px;
-        height: 26px;
+      .photo {
+        background-color: #fff;
+        border-radius: 100%;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid #0d1723;
+      }
+
+      .grid {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #fff;
       }
     }
   }
