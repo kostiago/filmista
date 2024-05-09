@@ -1,0 +1,40 @@
+:root {
+  --bg: #f3f6fe;
+  --bgSoft: #1f263e;
+  --text: #ebeef5;
+  --textSoft: #a8aebf;
+  --textSoftOut: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+
+  background-size: cover;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,37 +1,46 @@
+"use client";
 import Image from "next/image";
 import styles from "./sidebar.module.scss";
 import Logo from "/public/images/placeholder.svg";
 import Link from "next/link";
+import { BsArrowRightSquareFill, BsArrowLeftSquareFill } from "react-icons/bs";
 import { MdOutlineHome } from "react-icons/md";
+import { useState } from "react";
 
 const Sidebar = () => {
-  return (
-    <div className={styles.container}>
-      <div className={styles.sidebar}>
-        <div className={styles.head}>
-          <div className={styles.userImg}>
-            <Image src={Logo} width={30} height={30} alt="Filmista logo" />
-          </div>
+  const [inactive, setInactive] = useState(false);
 
-          <div className={styles.userDetails}>
-            <p className={styles.title}>Filmista</p>
-            <p className={styles.description}>Dashboard Administrativa</p>
-          </div>
+  return (
+    <div className={`${styles.sidebar} ${inactive ? styles.inactive : ""}`}>
+      <div className={styles.topSection}>
+        <div className={styles.logo}>
+          <Image src={Logo} width={40} height={40} alt="Filmista logo" />
         </div>
 
-        <div className={styles.nav}>
-          <div className={styles.menu}>
-            <p className={styles.title}>Principal</p>
+        <div
+          className={styles.toggleMenuBtn}
+          onClick={() => setInactive(!inactive)}
+        >
+          {inactive ? <BsArrowRightSquareFill /> : <BsArrowLeftSquareFill />}
+        </div>
+      </div>
 
-            <ul>
-              <li className={styles.active}>
-                <Link href={"/dashboard"}>
+      <div className={styles.divider}></div>
+
+      <div className={styles.menu}>
+        <p className={styles.title}>Menu</p>
+
+        <div className={styles.mainMenu}>
+          <ul>
+            <li className={styles.menuItem}>
+              <Link href={"/dashboard"}>
+                <div className={styles.menuIcon}>
                   <MdOutlineHome />
-                  <span>Dashboard</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
+                </div>
+                Dashboard
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

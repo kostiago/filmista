@@ -1,5 +1,5 @@
 import { poppins } from "@/utils/font";
-import "../../styles/globals.scss";
+import "../../styles/back-office/officeGlobals.scss";
 import styles from "../../styles/back-office/styles.module.scss";
 import Header from "@/components/back-office/Dashboard/Header/Header";
 import Sidebar from "@/components/back-office/Dashboard/Sidebar/Sidebar";
