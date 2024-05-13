@@ -55,6 +55,11 @@
         display: block;
         font-weight: 600;
 
+        span {
+          opacity: 1;
+          transition: opacity 0.2s ease-in;
+        }
+
         svg {
           font-size: 24px;
         }
@@ -104,6 +109,19 @@
     .toggleMenuBtn {
       right: -30px;
       color: wheat;
+    }
+  }
+
+  .menu {
+    .mainMenu {
+      .menuItem {
+        span {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
+      }
     }
   }
 }

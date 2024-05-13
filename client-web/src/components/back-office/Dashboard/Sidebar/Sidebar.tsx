@@ -7,7 +7,19 @@ import { BsArrowRightSquareFill, BsArrowLeftSquareFill } from "react-icons/bs";
 import { AiOutlineVideoCameraAdd } from "react-icons/ai";
 import { TbMessages, TbCreditCard, TbLayoutDashboard } from "react-icons/tb";
 import { useState } from "react";
+import MenuItem from "./menuItem";
 
+const menuItens = [
+  { name: "Dashboard", to: "/" },
+  {
+    name: "Novo conteudo",
+    to: "/",
+    subMenus: [{ name: "Courses" }, { name: "Discipline" }],
+  },
+
+  { name: "Relatorios", to: "/" },
+  { name: "Planos de assinatura", to: "/" },
+];
 const Sidebar = () => {
   const [inactive, setInactive] = useState(false);
 
@@ -33,55 +45,13 @@ const Sidebar = () => {
 
         <div className={styles.mainMenu}>
           <ul>
-            <li className={styles.menuItem}>
-              <Link href={"/dashboard"}>
-                <div className={styles.menuIcon}>
-                  <TbLayoutDashboard />
-                </div>
-                Dashboard
-              </Link>
-            </li>
-
-            <li className={styles.menuItem}>
-              <Link href={"/dashboard"}>
-                <div className={styles.menuIcon}>
-                  <AiOutlineVideoCameraAdd />
-                </div>
-                Novo Conteudo
-              </Link>
-
-              <ul className={styles.subMenu}>
-                <li>
-                  <Link href={"#"}>Filmes</Link>
-                </li>
-
-                <li>
-                  <Link href={"#"}>Series</Link>
-                </li>
-
-                <li>
-                  <Link href={"#"}>Documentarios</Link>
-                </li>
-              </ul>
-            </li>
-
-            <li className={styles.menuItem}>
-              <Link href={"/dashboard"}>
-                <div className={styles.menuIcon}>
-                  <TbMessages />
-                </div>
-                Relátorios
-              </Link>
-            </li>
-
-            <li className={styles.menuItem}>
-              <Link href={"/dashboard"}>
-                <div className={styles.menuIcon}>
-                  <TbCreditCard />
-                </div>
-                Planos
-              </Link>
-            </li>
+            {menuItens.map((menuItem, index) => (
+              <MenuItem
+                key={index}
+                name={menuItem.name}
+                subMenus={menuItem.subMenus || []}
+              />
+            ))}
           </ul>
         </div>
       </div>
@@ -95,7 +65,7 @@ const Sidebar = () => {
                 <div className={styles.menuIcon}>
                   <TbLayoutDashboard />
                 </div>
-                Notificações
+                <span>Notificações</span>
               </Link>
             </li>
 
@@ -104,7 +74,7 @@ const Sidebar = () => {
                 <div className={styles.menuIcon}>
                   <AiOutlineVideoCameraAdd />
                 </div>
-                Configurações
+                <span>Configurações</span>
               </Link>
             </li>
 
@@ -113,7 +83,7 @@ const Sidebar = () => {
                 <div className={styles.menuIcon}>
                   <TbMessages />
                 </div>
-                FAQ
+                <span>FAQ</span>
               </Link>
             </li>
           </ul>
