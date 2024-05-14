@@ -1,127 +1,99 @@
-.sidebar {
-  display: flex;
-  flex-direction: column;
+.sidebarWrapper {
   position: relative;
-  width: 18rem;
-  height: 100vh;
-  background: #1f263e;
-  padding: 15px 20px;
-  transition: width 0.2s ease-in;
+  .sidebar {
+    width: 18rem;
+    height: 100%;
+    background: #1f263e;
+    padding: 1rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  .topSection {
-    position: relative;
+    .topSection {
+      width: max-content;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #e5e7eb;
 
-    .logo {
-      display: inline-block;
-    }
-
-    .toggleMenuBtn {
-      font-size: 1.3rem;
-      color: #38405e;
-      position: absolute;
-      top: 50%;
-      right: -30px;
-      transform: translateY(-50%);
-
-      &:hover {
-        cursor: pointer;
-        color: red;
+      .logo {
+        width: 2.9rem;
+        height: 3rem;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .logoTitle {
+        font-size: 1.2rem;
+        font-weight: 600;
       }
     }
-  }
 
-  .divider {
-    width: 100%;
-    height: 1px;
-    border-radius: 1px;
-    background: #38405e;
-    margin-top: 10px;
-  }
+    .menu {
+      .title {
+        font-size: 10px;
+        font-weight: 500;
+        color: #757575;
+        text-transform: uppercase;
+        margin-top: 3rem;
+      }
+      .sidebarList {
+        margin-top: 1rem;
+        list-style: none;
 
-  .menu {
-    .title {
-      font-size: 10px;
-      font-weight: 500;
-      color: #757575;
-      text-transform: uppercase;
-      margin-top: 1rem;
-    }
+        .sidebarItem {
+          .sidebarLink {
+            display: inline-block;
+            font-size: 0.9rem;
+            padding: 0.8rem 1rem;
+            display: flex;
+            background-color: #262e49;
+            margin-bottom: 1rem;
+            border-radius: 0.8rem;
 
-    .mainMenu {
-      .menuItem {
-        color: #fff5f5;
-        text-decoration: none;
-        font-size: 0.975rem;
-        display: block;
-        font-weight: 600;
+            .icon {
+              font-size: 1.2rem;
+              display: inline-block;
+            }
 
-        span {
-          opacity: 1;
-          transition: opacity 0.2s ease-in;
-        }
-
-        svg {
-          font-size: 24px;
-        }
-
-        a {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 14px;
-          font-weight: bold;
-          padding: 5px 8px;
-          text-decoration: none;
-        }
-
-        .subMenu {
-          margin-left: 20px;
-          border-left: 1px solid #666;
-          box-sizing: border-box;
-          padding-left: 20px;
-          list-style: none;
-
-          a {
-            display: block;
-            margin: 5px 0;
-            font-size: 0.8rem;
-            font-weight: 600;
+            .name {
+              margin-left: 0.5rem;
+            }
           }
         }
       }
     }
   }
 
-  .sideMenuFooter {
-    width: 100%;
-    height: 100px;
-    background: yellow;
+  .btn {
     position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-}
+    font-size: 1.3rem;
+    color: #fff;
+    position: absolute;
+    top: 1.6rem;
+    right: 0;
 
-.inactive {
-  width: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  .topSection {
-    .toggleMenuBtn {
-      right: -30px;
-      color: wheat;
+    transform: translateX(50%);
+
+    &:hover {
+      cursor: pointer;
+      color: red;
     }
   }
 
-  .menu {
-    .mainMenu {
-      .menuItem {
-        span {
-          opacity: 0;
-          width: 0;
-          height: 0;
-          overflow: hidden;
-        }
-      }
-    }
+  [data-collapse="true"] {
+    width: 5.3rem;
+  }
+
+  [data-collapse="true"] .name,
+  [data-collapse="true"] .logoTitle {
+    display: none;
   }
 }
