@@ -17,6 +17,7 @@ interface ButtonProps {
     | "dark"
     | "login"
     | "addUser"
+    | "close"
     | "icon"; // New variant for icon-only button
   icon?: React.ReactNode;
   color?: string;
@@ -41,6 +42,7 @@ const IconButton: React.FC<ButtonProps> = ({
             ${variant === "info" ? styles.info : ""}
             ${variant === "light" ? styles.light : ""}
             ${variant === "dark" ? styles.dark : ""}
+            ${variant === "close" ? styles.close : ""}
             ${variant === "login" ? styles.login : ""}
             ${variant === "addUser" ? styles.addUser : ""}
             ${

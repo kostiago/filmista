@@ -17,19 +17,20 @@ import {
 import { useState } from "react";
 
 import { FaQuestionCircle } from "react-icons/fa";
+import InformationCard from "./InformationCard";
 
 const sidebarItens = [
   {
     section: "Acesso Rapido",
     name: "Inicio",
-    href: "/dashboard",
+    href: "/dashboard/home/overview",
     icon: <TbLayoutDashboard />,
   },
   {
     section: "Acesso Rapido",
     name: "Novo Conteudo",
 
-    href: "/dashboard",
+    href: "/dashboard/home/overview",
     icon: <TbNewSection />,
   },
   {
@@ -141,7 +142,9 @@ const Sidebar = () => {
           </ul>
         </div>
 
-        <div className={styles.sideMenuFooter}></div>
+        <div className={styles.sideMenuFooter}>
+          <InformationCard />
+        </div>
       </aside>
     </section>
   );

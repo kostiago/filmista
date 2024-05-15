@@ -1,0 +1,41 @@
+.banner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  position: relative;
+  background: white;
+
+  .logo {
+    grid-column: span 2 / span 2;
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  .text {
+    grid-column: span 5 / span 5;
+    color: #1f263e;
+
+    h3 {
+      line-height: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .btn {
+    grid-column: span 3 / span 3;
+  }
+  .icon {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
