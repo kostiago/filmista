@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .card {
+    position: relative;
+    width: 160px;
+    height: 225px;
+    background: #287bff;
+    border-radius: 20px;
+    border-bottom-left-radius: 160px;
+    border-bottom-right-radius: 160px;
+    box-shadow: 0 10px 0 #fff, inset 0 -10px 0 rgba(255, 255, 255, 0.25),
+      0 20px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -90px;
+      left: -50px;
+      width: 100%;
+      height: 120%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+      transform: rotate(35deg);
+      pointer-events: none;
+      filter: blur(5px);
+    }
+
+    &:nth-child(1) {
+      background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+    }
+    &:nth-child(4) {
+      background: linear-gradient(to bottom, #ffec61, #f321d7);
+    }
+    &:nth-child(3) {
+      background: linear-gradient(to bottom, #24ff72, #9a4eff);
+    }
+
+    .icon {
+      position: relative;
+      width: 80px;
+      height: 70px;
+      background: #dbeafe;
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1), inset 0 -8px 0 #fff;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+
+      svg {
+        color: #3c2846;
+
+        font-size: 3.5rem;
+        position: relative;
+        z-index: 1000;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -25px;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        border-top-right-radius: 50px;
+        box-shadow: 15px -15px 0 15px #dbeafe;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -25px;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        border-top-left-radius: 50px;
+        box-shadow: -15px -15px 0 15px #dbeafe;
+      }
+    }
+
+    .content {
+      position: absolute;
+      width: 100%;
+      padding: 30px;
+      padding-top: 90px;
+      text-align: center;
+      color: #dbeafe;
+
+      h4 {
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      small {
+        font-weight: 700;
+      }
+
+      p {
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(to bottom, #ffec61, #f321d7);
+      cursor: pointer;
+    }
+  }
+}
