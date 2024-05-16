@@ -1,0 +1,90 @@
+.container {
+  padding: 2rem;
+  border-bottom: 1px solid rgb(203 213 225);
+  background-color: #dbeafe;
+  color: #1f263e;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  .content {
+    grid-column: span 8 / span 8;
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    .cardContainer {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      .card {
+        border: 1px solid rgb(148 163 184);
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.75rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        h4 {
+          font-weight: 500;
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+        .quant {
+          display: flex;
+          align-items: center;
+
+          svg {
+            font-size: 1rem;
+          }
+          span {
+            margin-left: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+        }
+
+        &:hover {
+          border: 1px solid blueviolet;
+        }
+      }
+    }
+  }
+  .summary {
+    grid-column: span 4 / span 4;
+
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .card {
+      margin-top: 1.5rem;
+      border: 1px solid rgb(148 163 184);
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+      h4 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+      &:hover {
+        border: 1px solid blueviolet;
+      }
+    }
+  }
+}

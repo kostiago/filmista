@@ -44,11 +44,19 @@
 
     .links {
       padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
+      padding-bottom: 0.9rem;
       margin-left: 1rem;
+      font-size: 0.875rem;
+
+      &:hover {
+        border-bottom: 3px solid #1349fc2f;
+      }
     }
     .active {
       border-bottom: 3px solid #1348fc;
+      &:hover {
+        border-bottom: 3px solid #1348fc;
+      }
     }
   }
 }
