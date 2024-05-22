@@ -19,13 +19,22 @@ const Header = ({ type = "public" }) => {
             />
           </Link>
 
-          <Button
-            rounded
-            variant="secondary"
-            icon={<img src="./images/placeholder.svg" />}
-          >
-            Comece agora
-          </Button>
+          <div className={styles.loginButtons}>
+            <Link href={"/login"}>
+              <Button rounded variant="login" icon={<AiOutlineLogin />}>
+                Entrar
+              </Button>
+            </Link>
+            <Link href={"/register"}>
+              <Button
+                rounded
+                variant="secondary"
+                icon={<img src="/images/placeholder.svg" />}
+              >
+                Comece agora
+              </Button>
+            </Link>
+          </div>
         </div>
       );
       break;
@@ -44,7 +53,6 @@ const Header = ({ type = "public" }) => {
             <Link href="/movies">Filmes</Link>
             <Link href="/tv-programs">Series</Link>
             <Link href="/suggestions">Sugestões</Link>
-            <Link href={"/dashboard/addMovie"}>Dashboard</Link>
           </nav>
           <div className={styles.loginButtons}>
             <Link href={"/login"}>

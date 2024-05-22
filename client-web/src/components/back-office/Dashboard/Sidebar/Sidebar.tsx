@@ -30,7 +30,7 @@ const sidebarItens = [
     section: "Acesso Rapido",
     name: "Novo Conteudo",
 
-    href: "/dashboard/home/overview",
+    href: "/dashboard/inventory",
     icon: <TbNewSection />,
   },
   {

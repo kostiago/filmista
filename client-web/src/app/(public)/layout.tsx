@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={poppins.className}>
-        <Header type="auth" />
+        <Header type="public" />
         {children}
         <Footer />
       </body>
